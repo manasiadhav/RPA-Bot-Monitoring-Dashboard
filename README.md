@@ -127,14 +127,7 @@ A comprehensive dashboard for monitoring, analyzing, and managing RPA (Robotic P
 
 ## 🚀 Getting Started
 
-<<<<<<< HEAD
 ### System Requirements
-
-#### Minimum Hardware Requirements
-- CPU: Dual-core processor or better
-- RAM: 4GB minimum (8GB recommended)
-- Storage: 1GB free space
-- Internet Connection: Required for npm packages and Python dependencies
 
 #### Software Prerequisites
 1. **Python Environment**
@@ -327,13 +320,8 @@ For detailed contribution guidelines, see CONTRIBUTING.md
 ## 📊 Architecture
 
 ### System Architecture
-```
-+------------------+     +-----------------+     +------------------+
-|    Frontend      |     |     Backend     |     |    Database      |
-|  React + Vite    |<--->|  Flask + ML     |<--->|    SQLite       |
-|  Material-UI     |     |  Random Forest  |     |                  |
-+------------------+     +-----------------+     +------------------+
-```
+
+<img width="1002" height="890" alt="Screenshot 2025-11-06 085756" src="https://github.com/user-attachments/assets/a2119577-b031-4be9-a037-2cbb95c0475d" />
 
 ### Data Flow
 1. Bot execution data collection
@@ -341,18 +329,6 @@ For detailed contribution guidelines, see CONTRIBUTING.md
 3. ML model risk assessment
 4. Dashboard visualization
 
-## 🔒 Security
-
-### Authentication
-- JWT-based authentication
-- Role-based access control
-- Session management
-
-### Data Protection
-- HTTPS encryption
-- Database encryption
-- Input validation
-- XSS protection
 
 ## 📈 Machine Learning Pipeline
 
@@ -373,12 +349,7 @@ For detailed contribution guidelines, see CONTRIBUTING.md
 
 ## 🔄 API Documentation
 
-### Authentication Endpoints
-```
-POST /api/auth/login
-POST /api/auth/logout
-POST /api/auth/refresh
-```
+
 
 ### Analytics Endpoints
 ```
@@ -395,27 +366,6 @@ PUT /api/bots/{bot_id}
 DELETE /api/bots/{bot_id}
 ```
 
-## 📱 Responsive Design
-
-The dashboard is fully responsive and works on:
-- Desktop (1920×1080 and above)
-- Laptop (1366×768)
-- Tablet (768×1024)
-- Mobile (375×667)
-
-## 🎯 Performance Optimization
-
-### Frontend
-- Code splitting
-- Lazy loading
-- Image optimization
-- Caching strategies
-
-### Backend
-- Database indexing
-- Query optimization
-- Response caching
-- Connection pooling
 
 ## 📆 Release History
 
@@ -443,12 +393,6 @@ The dashboard is fully responsive and works on:
 - Resource usage
 - User activity
 
-## 💡 Best Practices
-
-### Code Style
-- PEP 8 for Python
-- Airbnb style for JavaScript
-- Conventional commits
 
 ### Development Workflow
 1. Create feature branch
@@ -470,13 +414,6 @@ The dashboard is fully responsive and works on:
 - [Feature Requests](https://github.com/ARYABARAI30123/RPA-Bot-Monitoring-System/issues/new)
 - [Discussions](https://github.com/ARYABARAI30123/RPA-Bot-Monitoring-System/discussions)
 
-## 📝 Changelog
-
-### [1.0.0] - 2025-11-06
-- Initial release
-- Core dashboard features
-- ML risk assessment
-- Real-time monitoring
 
 ## 🎓 Tutorial & Examples
 
