@@ -25,7 +25,12 @@ def server_error(e):
 
 # Constants
 APP_ROOT = os.path.dirname(__file__)
-DATA_PATH = os.path.join(APP_ROOT, '..', 'RPA_Bot_Data_Synthetic_800_Rows.csv')
+# Try multiple CSV locations so it works locally and on Vercel
+DATA_CANDIDATE_PATHS = [
+    os.path.join(APP_ROOT, 'RPA_Bot_Data_Synthetic_800_Rows.csv'),  # bundled inside backend (Vercel)
+    os.path.join(APP_ROOT, 'temp_data.csv'),                        # existing fallback inside backend
+    os.path.join(APP_ROOT, '..', 'RPA_Bot_Data_Synthetic_800_Rows.csv'),  # local dev from repo root
+]
 MODEL_PATH = os.path.join(APP_ROOT, 'model.pkl')
 JWT_SECRET = os.environ.get('JWT_SECRET', 'supersecretkey')
 JWT_ALGO = 'HS256'
@@ -50,8 +55,15 @@ def require_jwt(fn):
     return wrapper
 
 def load_data():
-    if os.path.exists(DATA_PATH):
-        df = pd.read_csv(DATA_PATH)
+    # Find the first available CSV
+    csv_path = None
+    for candidate in DATA_CANDIDATE_PATHS:
+        if os.path.exists(candidate):
+            csv_path = candidate
+            break
+
+    if csv_path:
+        df = pd.read_csv(csv_path)
     else:
         # fallback: small synthetic dataframe
         df = pd.DataFrame({
