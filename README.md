@@ -1,4 +1,4 @@
-# RPA Bot Analytics Dashboard
+# RPA Bot Monitoring System
 
 A full-stack analytics dashboard for monitoring and analyzing RPA bot performance. Built with React, Flask, and Machine Learning.
 
